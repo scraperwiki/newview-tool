@@ -49,14 +49,14 @@ function showAlert(title, message, level){
 
 $(function(){
   readSettings(function(settings){
-    if('view_apikey' in settings){
+    if('source' in settings && 'apikey' in settings.source){
       // var server = window.location.hostname
       // Temporarily override ugly boxecutor url
       $('.server').text('box.scraperwiki.com')
       $('.box').text(window.location.pathname.split('/')[1])
-      $('.apikey').text(settings['view_apikey'])
+      $('.apikey').text(settings.source.apikey)
     } else {
-      showAlert('What is your ScraperWiki API key?', 'You supplied a JSON object in the URL #fragment, but it doesn&rsquo;t contain a &ldquo;view_apikey&rdquo; key-value pair. Are you sure you followed the right link?', true)
+      showAlert('What is your ScraperWiki API key?', 'You supplied a JSON object in the URL #fragment, but it doesn&rsquo;t contain a &ldquo;source.apikey&rdquo; key-value pair. Are you sure you followed the right link?', true)
     }
   })
 })
