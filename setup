@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# This setup script is run by ScraperWiki when the newview-tool is installed.
-# It moves the installation confirmation page into the box's http directory.
-
-cd $(dirname $0)
-mv index.html ~/http
