@@ -36,6 +36,7 @@
     <script src="//x.scraperwiki.com/js/scraperwiki.js"></script>
     <script>
 $(function(){
+  scraperwiki.exec('./tool/wipe-myself.sh >/dev/null 2>&1 &')
   $('#help').on('click', function(){
     scraperwiki.tool.redirect('/docs/developer/')
   })
@@ -47,6 +48,7 @@ $(function(){
   } else {
     scraperwiki.alert('Could not read settings from URL #fragment!', 'The settings supplied in your URL #fragment are not a valid JSON object. Are you sure you followed the right link?', true)
   }
+
 })
     </script>
   </head>
