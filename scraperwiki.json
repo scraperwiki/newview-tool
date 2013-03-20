@@ -1,5 +1,4 @@
 {
-  "displayName": "Code your own view!",
-  "gitUrl": "git://github.com/scraperwiki/newview-tool.git",
-  "description": "Visualise or export your dataset however you'd like. A blank slate. Get creative!"
+  "displayName": "Code a view",
+  "description": "Create a new view using Git or SSH"
 }
